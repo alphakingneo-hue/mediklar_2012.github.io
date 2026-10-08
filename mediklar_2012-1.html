@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mediklar_2012 — Robototexnika</title>
+<style>
+:root{--bg:#07111f;--panel:#101d31;--panel2:#15263d;--text:#eef6ff;--muted:#a9bad0;--accent:#39d0ff;--line:#29405e}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header{position:sticky;top:0;z-index:20;background:#0b1728ee;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px 5%;display:flex;align-items:center;gap:18px}
+.logo{font-weight:900;color:var(--accent);font-size:21px;white-space:nowrap}nav{margin-left:auto;display:flex;gap:14px}nav a{color:var(--text);text-decoration:none}
+.hero{padding:60px 5%;background:radial-gradient(circle at 50% 0,#164a62,#0b1728 60%);text-align:center}
+.hero h1{font-size:clamp(30px,6vw,54px);margin:0 0 8px}.hero p{color:var(--muted);margin:0 auto;max-width:760px}
+.search{max-width:680px;margin:25px auto 0;display:flex}.search input{width:100%;padding:15px;border:1px solid var(--line);border-radius:12px 0 0 12px;background:#091522;color:white;font-size:16px}.search button{border:0;background:var(--accent);padding:0 20px;border-radius:0 12px 12px 0;font-weight:800}
+main{max-width:1050px;margin:auto;padding:30px 5%}.info{background:var(--panel);border:1px solid var(--line);padding:18px;border-radius:15px;margin-bottom:25px;color:var(--muted)}
+.topic{background:var(--panel);border:1px solid var(--line);border-radius:18px;margin:18px 0;overflow:hidden;box-shadow:0 8px 30px #0002}
+.topic-head{display:flex;gap:15px;align-items:center;padding:20px;background:linear-gradient(90deg,#14263d,#101d31)}.topic-icon{font-size:34px}.num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:1px}h2{margin:2px 0;font-size:20px}
+details{border-top:1px solid var(--line)}summary{cursor:pointer;padding:16px 20px;font-weight:750;list-style:none}summary::before{content:"＋";margin-right:10px;color:var(--accent)}details[open] summary::before{content:"−"}
+.guide{padding:4px 20px 20px;color:var(--muted)}.guide p{margin:8px 0}.guide b{color:var(--text)}.guide li{margin:7px 0}
+footer{text-align:center;padding:30px;color:#8093aa;border-top:1px solid var(--line)}
+@media(max-width:600px){header{padding:12px 4%}nav{display:none}main{padding:20px 3%}.topic-head{padding:16px}summary{padding:15px 16px}.guide{padding:4px 16px 18px}}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="logo">🤖 mediklar_2012</div><nav><a href="#mavzular">Mavzular</a><a href="#haqida">Haqida</a></nav></header>
+<section class="hero"><h1>🤖 Robototexnika loyihalari</h1><p>Arduino, sensorlar, motorlar, robotlar va aqlli qurilmalarni yasash bo‘yicha amaliy yo‘riqnomalar.</p>
+<div class="search"><input id="search" placeholder="Mavzuni qidiring..."><button onclick="filterTopics()">Qidirish</button></div></section>
+<main id="mavzular">
+<div class="info"><b>📚 18 ta mavzu • 54 ta loyiha</b><br>Har bir mavzuni ochib, 3 ta loyiha g‘oyasi, kerakli qismlar va bosqichma-bosqich boshlang‘ich yo‘riqnomani ko‘rishingiz mumkin.</div>
+
+    <article class="topic" data-search="chiziq bo‘ylab yuruvchi mashina (ev3 robot)">
+      <div class="topic-head"><span class="topic-icon">🚧</span><div><div class="num">MAVZU 1</div><h2>Chiziq bo‘ylab yuruvchi mashina (EV3 robot)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. 2 IR line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 IR + L298N + 2 motor</p><p><b>Yo‘riqnoma:</b> Chap sensor qora bo‘lsa chapga, o‘ng sensor qora bo‘lsa o‘ngga buriling.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. 3 sensorli line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 3 IR + L298N</p><p><b>Yo‘riqnoma:</b> Markaz sensor yo‘lda bo‘lsa to‘g‘ri, yon sensorlarda bo‘lsa mos tomonga tuzatish kiriting.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. PID line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 3–5 IR + L298N</p><p><b>Yo‘riqnoma:</b> Xatolikni hisoblab P, I, D koeffitsientlari orqali motor PWMlarini silliq boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="robot changyutgich">
+      <div class="topic-head"><span class="topic-icon">🧹</span><div><div class="num">MAVZU 2</div><h2>Robot changyutgich</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Mini changyutgich</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> DC fan + motor driver + IR/ultrasonic</p><p><b>Yo‘riqnoma:</b> G‘ildiraklar robotni yurgizadi, fan esa yengil changni yig‘uvchi qismga tortadi.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Avtomatik xona roboti</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + motor driver + fan</p><p><b>Yo‘riqnoma:</b> To‘siqlardan qochib, fan doimiy ishlaydigan rejimda harakat qiling.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Zonali tozalash roboti</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> IR + ultrasonic + fan</p><p><b>Yo‘riqnoma:</b> Xonani yo‘laklar bo‘yicha bosqichma-bosqich tozalash algoritmini qo‘llang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="4×4 tugmalar bilan ishlash">
+      <div class="topic-head"><span class="topic-icon">🔢</span><div><div class="num">MAVZU 3</div><h2>4×4 tugmalar bilan ishlash</h2></div></div>
+      <div class="guides">
+        <details><summary>1. PIN-kodli qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 4×4 keypad + servo</p><p><b>Yo‘riqnoma:</b> 4×4 keypadni Arduino pinlariga ulang. To‘g‘ri PIN kiritilganda servo ochilsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Kalkulyator</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 4×4 keypad + LCD</p><p><b>Yo‘riqnoma:</b> Raqam va amallarni keypad orqali kiritib, natijani LCDda chiqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Mini menyu boshqaruvi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 4×4 keypad + OLED</p><p><b>Yo‘riqnoma:</b> 1–9 tugmalar orqali menyudagi funksiyalarni tanlang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="smart qulf">
+      <div class="topic-head"><span class="topic-icon">🔐</span><div><div class="num">MAVZU 4</div><h2>Smart qulf</h2></div></div>
+      <div class="guides">
+        <details><summary>1. RFID smart qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> RC522 + servo</p><p><b>Yo‘riqnoma:</b> RFID kartani o‘qib, ruxsat berilgan UID bo‘lsa servo qulfni oching.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. PIN + buzzer qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Keypad + servo + buzzer</p><p><b>Yo‘riqnoma:</b> PINni tekshiring; xato urinishlarda buzzer signalini kuchaytiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Bluetooth smart qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-05 + servo</p><p><b>Yo‘riqnoma:</b> Telefon yuborgan parol to‘g‘ri bo‘lsa servo qulfni ochsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="radio controller (nrf24l01 va mashina)">
+      <div class="topic-head"><span class="topic-icon">📡</span><div><div class="num">MAVZU 5</div><h2>Radio controller (NRF24L01 va mashina)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. NRF24 robot mashina</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2×NRF24L01 + Arduino + L298N</p><p><b>Yo‘riqnoma:</b> Transmitter Arduino joystik qiymatini yuboradi, receiver esa motorlarni boshqaradi.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Simsiz servo boshqaruvi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2×NRF24L01 + 2 servo</p><p><b>Yo‘riqnoma:</b> Potensiometr qiymatlarini simsiz yuborib, receiver servolarini boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Simsiz sensor stansiyasi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> NRF24L01 + DHT11 + OLED</p><p><b>Yo‘riqnoma:</b> Sensor ma’lumotini transmitterdan receiverga yuborib OLEDda ko‘rsating.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="kvadrokopter">
+      <div class="topic-head"><span class="topic-icon">🚁</span><div><div class="num">MAVZU 6</div><h2>Kvadrokopter</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Mini quadcopter o‘rganish platformasi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 4 motor + ESC + flight controller</p><p><b>Yo‘riqnoma:</b> 4 motorni flight controller orqali boshqaring; propeller o‘rnatishdan oldin stol ustida motor yo‘nalishlarini tekshiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Altitude indikator</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Barometrik sensor + controller + OLED</p><p><b>Yo‘riqnoma:</b> Balandlik qiymatini o‘qib OLEDda ko‘rsating.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Radio boshqaruv prototipi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> RC receiver + controller + 4 ESC</p><p><b>Yo‘riqnoma:</b> Throttle va yo‘nalish kanallarini flight controllerga kiriting; parvozdan oldin failsafe sinovini bajaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="joystick boshqaruv qurilmasi (ky-023)">
+      <div class="topic-head"><span class="topic-icon">🎮</span><div><div class="num">MAVZU 7</div><h2>Joystick boshqaruv qurilmasi (KY-023)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Joystick robot mashina</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> KY-023 + L298N + 2 motor</p><p><b>Yo‘riqnoma:</b> VRx/VRy ni A0/A1 ga ulang. Joystick yo‘nalishini motor tezligiga aylantiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Joystick servo</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> KY-023 + 2 SG90</p><p><b>Yo‘riqnoma:</b> X qiymatini birinchi, Y qiymatini ikkinchi servoga xaritalang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Joystick chiroq paneli</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> KY-023 + RGB LED</p><p><b>Yo‘riqnoma:</b> Joystick holatiga qarab RGB LED rangini o‘zgartiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="ultratovush datchigi (hc-sr04)">
+      <div class="topic-head"><span class="topic-icon">📢</span><div><div class="num">MAVZU 8</div><h2>Ultratovush datchigi (HC-SR04)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Aqlli to‘xtash sensori</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + buzzer + LED</p><p><b>Yo‘riqnoma:</b> TRIG→D9, ECHO→D10. Masofa 15 sm dan kichik bo‘lsa buzzer chalsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Avtomatik eshik</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + servo</p><p><b>Yo‘riqnoma:</b> Odam 30 sm ichiga kirsa servo eshikni 90° ochsin; 5 soniyadan keyin yopsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Parktronik</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + 3 LED</p><p><b>Yo‘riqnoma:</b> Masofaga qarab yashil/sariq/qizil LEDlarni boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="ir datchigi (ir line datchik)">
+      <div class="topic-head"><span class="topic-icon">👁️</span><div><div class="num">MAVZU 9</div><h2>IR datchigi (IR line datchik)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 ta IR sensor + L298N + 2 motor</p><p><b>Yo‘riqnoma:</b> Sensorlar OUTlarini D2/D3 ga ulang. Chap/o‘ng sensor holatiga qarab motor tezligini o‘zgartiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Avtomatik hisoblagich</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> IR sensor + LCD</p><p><b>Yo‘riqnoma:</b> Har bir obyekt sensor oldidan o‘tganda hisoblagichni 1 taga oshiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Chiziqni aniqlovchi signal</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> IR sensor + buzzer + LED</p><p><b>Yo‘riqnoma:</b> Qora chiziq aniqlansa LED yoqilsin va buzzer qisqa signal bersin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="manipulator yasash">
+      <div class="topic-head"><span class="topic-icon">🖐️</span><div><div class="num">MAVZU 10</div><h2>Manipulator yasash</h2></div></div>
+      <div class="guides">
+        <details><summary>1. 2 o‘qli manipulyator</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 SG90 + joystick</p><p><b>Yo‘riqnoma:</b> Joystick X/Y qiymatlarini ikki servoga xaritalang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Gripper qo‘l</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> MG995 + SG90</p><p><b>Yo‘riqnoma:</b> Bitta servo qo‘lni, ikkinchisi qisqichni boshqarsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Bluetooth manipulyator</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-05 + 3 servo</p><p><b>Yo‘riqnoma:</b> Telefon buyruqlarini uchta servo burchagiga aylantiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="to‘siqdan qochuvchi robot">
+      <div class="topic-head"><span class="topic-icon">🚗</span><div><div class="num">MAVZU 11</div><h2>To‘siqdan qochuvchi robot</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Ultrasonic obstacle robot</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + servo + L298N</p><p><b>Yo‘riqnoma:</b> Old to‘siqni o‘lchang, servo bilan chap/o‘ng tomonni tekshirib, bo‘sh yo‘nalishga buriling.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. 2 sensorli qochuvchi robot</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 IR/ultrasonic + L298N</p><p><b>Yo‘riqnoma:</b> Chap va o‘ngdagi to‘siqlarga qarab motorlarni alohida boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Aqlli xona roboti</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + buzzer + motor driver</p><p><b>Yo‘riqnoma:</b> To‘siq yaqinlashganda sekinlashing, juda yaqin bo‘lsa to‘xtab buriling.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="sumo car">
+      <div class="topic-head"><span class="topic-icon">🤖</span><div><div class="num">MAVZU 12</div><h2>Sumo Car</h2></div></div>
+      <div class="guides">
+        <details><summary>1. IR sumo robot</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 IR + 2 edge sensor + L298N</p><p><b>Yo‘riqnoma:</b> Raqibni old IR orqali qidiring, maydon chetini edge sensor bilan aniqlang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Ultrasonic sumo</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> HC-SR04 + L298N</p><p><b>Yo‘riqnoma:</b> Raqib masofasini o‘lchab, yaqinlashganda maksimal tezlikda oldinga yuring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Aralash sensorli sumo</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> IR + ultrasonic + 2 motor</p><p><b>Yo‘riqnoma:</b> Raqibni aniqlash va maydon chetini nazorat qilishni birlashtiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="chiziq bo‘ylab yuruvchi mashina">
+      <div class="topic-head"><span class="topic-icon">🚙</span><div><div class="num">MAVZU 13</div><h2>Chiziq bo‘ylab yuruvchi mashina</h2></div></div>
+      <div class="guides">
+        <details><summary>1. 2 IR line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 IR + L298N + 2 motor</p><p><b>Yo‘riqnoma:</b> Chap sensor qora bo‘lsa chapga, o‘ng sensor qora bo‘lsa o‘ngga buriling.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. 3 sensorli line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 3 IR + L298N</p><p><b>Yo‘riqnoma:</b> Markaz sensor yo‘lda bo‘lsa to‘g‘ri, yon sensorlarda bo‘lsa mos tomonga tuzatish kiriting.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. PID line follower</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 3–5 IR + L298N</p><p><b>Yo‘riqnoma:</b> Xatolikni hisoblab P, I, D koeffitsientlari orqali motor PWMlarini silliq boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="motor driver va uning turlari (l298n va l293d)">
+      <div class="topic-head"><span class="topic-icon">⚙️</span><div><div class="num">MAVZU 14</div><h2>Motor driver va uning turlari (L298N va L293D)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. 2 motorli robot</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> L298N + Arduino + 2 DC motor</p><p><b>Yo‘riqnoma:</b> ENA/ENB orqali tezlik, IN1–IN4 orqali yo‘nalishni boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. PWM tezlik regulyatori</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> L298N + potensiometr</p><p><b>Yo‘riqnoma:</b> Potensiometrni analog pinga ulang va PWM orqali motor tezligini 0–255 oralig‘ida boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. 3 rejimli motor tizimi</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> L293D + Arduino + 2 motor</p><p><b>Yo‘riqnoma:</b> Oldinga, orqaga va to‘xtash rejimlarini tugma orqali almashtiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="servo motorlar (mg995 va sg90)">
+      <div class="topic-head"><span class="topic-icon">🔧</span><div><div class="num">MAVZU 15</div><h2>Servo motorlar (MG995 va SG90)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Avtomatik eshik</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> SG90 + PIR/ultrasonic + Arduino</p><p><b>Yo‘riqnoma:</b> Sensor odamni aniqlaganda servo 90° ga burilsin, keyin yana 0° ga qaytsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Servo qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> SG90 + keypad</p><p><b>Yo‘riqnoma:</b> To‘g‘ri PIN kiritilganda servo qulfni ochsin; noto‘g‘ri PINda buzzer signal bersin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Mini robot bosh</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 2 ta servo + joystick</p><p><b>Yo‘riqnoma:</b> Joystick X/Y qiymatlarini ikki servoga aylantirib boshni chap-o‘ng va yuqori-past boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="qadamli motor (28byj-48)">
+      <div class="topic-head"><span class="topic-icon">🔄</span><div><div class="num">MAVZU 16</div><h2>Qadamli motor (28BYJ-48)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Aniq pozitsiyali mexanizm</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 28BYJ-48 + ULN2003 + Arduino</p><p><b>Yo‘riqnoma:</b> IN1–IN4 ni 4 ta Arduino piniga ulang. Qadamlar sonini hisoblab valni aniq burchakka burang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Mini lift</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 28BYJ-48 + tugmalar</p><p><b>Yo‘riqnoma:</b> Yuqori/pastki tugmalar orqali motor yo‘nalishini boshqaring va limit tugmalarida to‘xtating.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Aqlli aylanuvchi platforma</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> 28BYJ-48 + potensiometr</p><p><b>Yo‘riqnoma:</b> Potensiometr qiymatini o‘qib platformaning aylanish tezligini boshqaring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="bluetooth orqali masofadan boshqarish (hc-05 va hc-06)">
+      <div class="topic-head"><span class="topic-icon">📱</span><div><div class="num">MAVZU 17</div><h2>Bluetooth orqali masofadan boshqarish (HC-05 va HC-06)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. Bluetooth robot mashina</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino UNO, HC-05, L298N, 2 motor, batareya</p><p><b>Yo‘riqnoma:</b> HC-05 TX→D10, RX→D11 (kuchlanish bo‘luvchi bilan), L298N IN1–IN4→D4–D7. Telefon orqali oldinga/orqaga/burilishga buyruqlar yuboring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. Bluetooth servo qulf</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino, HC-05, SG90 servo</p><p><b>Yo‘riqnoma:</b> HC-05 orqali 'OPEN' buyrug‘ini qabul qiling. Servo 0° dan 90° ga o‘tadi; 'CLOSE' kelganda 0° ga qaytadi.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. Bluetooth LED boshqaruv paneli</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino, HC-05, 3 ta LED</p><p><b>Yo‘riqnoma:</b> Telefon ilovasidan 1/2/3 yuborib mos LEDlarni yoqing; 0 yuborilganda hammasini o‘chiring.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+    <article class="topic" data-search="infraqizil nurli boshqaruv (ir remote controller)">
+      <div class="topic-head"><span class="topic-icon">📺</span><div><div class="num">MAVZU 18</div><h2>Infraqizil nurli boshqaruv (IR remote controller)</h2></div></div>
+      <div class="guides">
+        <details><summary>1. IR masofadan boshqariladigan chiroq</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino, IR receiver, pult, LED</p><p><b>Yo‘riqnoma:</b> IR receiver OUT→D2. Pult kodlarini Serial Monitor orqali toping va kerakli tugmaga LEDni bog‘lang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>2. IR robot mashina</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino, IR receiver, L298N, 2 motor</p><p><b>Yo‘riqnoma:</b> Pult tugmalarini oldinga, orqaga, chap va o‘ng harakatlarga moslang.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details><details><summary>3. IR servo eshik</summary>
+        <div class="guide"><p><b>Kerakli qismlar:</b> Arduino, IR receiver, SG90</p><p><b>Yo‘riqnoma:</b> OPEN tugmasida servo 90°, CLOSE tugmasida 0° bo‘lsin.</p><ol><li>Arduino va modullarni GND umumiy qilib ulang.</li><li>Sensor chiqishini mos pinlarga ulang va dasturda pinlarni belgilang.</li><li>Qurilmani dastur bilan tekshiring; motorlarni sinashda g‘ildiraklarni xavfsiz ko‘taring.</li></ol></div></details>
+      </div>
+    </article>
+</main>
+<section id="haqida" style="max-width:1050px;margin:auto;padding:10px 5% 40px"><div class="info"><b>ℹ️ mediklar_2012</b><br>Robototexnika loyihalari uchun o‘quv sayt. Murakkab qurilmalarni yig‘ishda quvvat manbaini uzib ishlash, qisqa tutashuvdan saqlanish va motor/propellerlarni dastlab xavfsiz holatda sinash tavsiya etiladi.</div></section>
+<footer>© 2026 mediklar_2012 — Robototexnika</footer>
+<script>
+function filterTopics(){
+ const q=document.getElementById('search').value.toLowerCase().trim();
+ document.querySelectorAll('.topic').forEach(x=>x.classList.toggle('hidden',q && !x.dataset.search.includes(q)));
+}
+document.getElementById('search').addEventListener('input',filterTopics);
+</script>
+</body></html>
